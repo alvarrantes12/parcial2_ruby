@@ -5,14 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: lenguajes_1_development
+  database: parcial_2_development
 
 test:
   <<: *default
-  database: lenguajes_1_test
+  database: parcial_2_test
 
 production:
   <<: *default
-  database: lenguajes_1_production
-  username: lenguajes_1
+  database: parcial_2_production
+  username: parcial_2
   password: <%= ENV["LENGUAJES_1_DATABASE_PASSWORD"] %>

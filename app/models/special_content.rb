@@ -1,0 +1,2 @@
+class SpecialContent < ApplicationRecord
+end
