@@ -19,6 +19,7 @@ module Api
       @content = Content.new(content_params)
 
       if @content.save
+        @contents = Content.all
         render 'api/contents/index', status: :created, location: @content
       else
         render json: @content.errors, status: :unprocessable_entity

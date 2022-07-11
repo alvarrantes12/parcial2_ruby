@@ -19,6 +19,7 @@ module Api
       @special_content = SpecialContent.new(special_content_params)
 
       if @special_content.save
+        @contents = Content.all
         render 'api/special_contents/index', status: :created, location: @special_content
       else
         render json: @special_content.errors, status: :unprocessable_entity
